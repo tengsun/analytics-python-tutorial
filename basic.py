@@ -16,3 +16,17 @@ print('hello\nrunoob')      # 使用反斜杠(\)+n转义特殊字符
 print(r'hello\nrunoob')     # 在字符串前面添加一个 r，表示原始字符串，不会发生转义
 
 print ("我叫%s今年%d岁!" % ('小明', 10))
+
+
+for x in range(1, 11):
+    print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')
+    print(repr(x*x*x).rjust(4))
+
+for x in range(1, 11):
+    print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))
+
+print('{0}网址：{1}'.format('菜鸟教程', 'www.runoob.com'))
+
+table = {'Google': 1, 'Runoob': 2, 'Taobao': 3}
+for name, number in table.items():
+    print('{0:8}=>{1:3d}'.format(name, number))
